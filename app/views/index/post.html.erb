@@ -1,0 +1,64 @@
+<!--  -->
+<!-- モーダルの設定 -->
+<%= form_with(url: "/index/ajaxPost", local: true) do |form| %>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">新規投稿</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <input class="btn btn-primary" name="memo_picture1" type="file" value="画像を追加">
+      <div class="mt-3 notice-length"></div>
+      <textarea class="mt-3" name="content" placeholder="説明文を入力"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary modal-cancel-button" data-dismiss="modal">キャンセル</button>
+      <button type="button" class="btn btn-primary modal-post-button">投稿</button>
+    </div><!-- /.modal-footer -->
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<% end %>
+
+
+<div class="post-card">
+ <hr class="post-start post-hr">
+ <div class="post-information container my-0">
+  <div class="my-2 row">
+   <div class="col-1">
+     <i class="fa fa-user-circle fa-2x"></i>
+   </div>
+   <a class="ml-4 my-1 account-name">塩見陵介</a>
+   <div class="my-2 col">
+     <i class="fas fa-ellipsis-v float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+     <div class="post-dropdown dropdown open">
+      <ul class="dropdown-menu">
+       <li><a href="#">削除</a></li>
+       <li><a href="#">メニュー3</a></li>
+       <li role="separator" class="divider"></li><!-- 横仕切り線 -->
+       <li><a href="#">その他リンク</a></li>
+      </ul>
+     </div><!-- /.dropdown -->
+   </div>
+  </div>
+ </div><!-- ここまでcontainer -->
+
+ <div class="post-image"><img src="/testImage.jpg"></div>
+ <div class="container my-0">
+   <div class="row">
+     <div class="col favo-button">
+       <a class="heart-button"><i class="far fa-heart"></i></a>
+       <a class="favo-number">0</a>
+     </div>
+     <div class="col mt-1 post-time">2019/08/15</div>
+   </div>
+   <div class="row">
+     <div class="col my-2 post-content">あああああああああああああああああああああああああああああああああああああああああ</div>
+   </div>
+  </div>
+ <hr class="post-end post-hr">
+</div>

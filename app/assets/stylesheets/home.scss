@@ -1,0 +1,46 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// top画面に関するcssを記述しております
+
+#top-page{
+  margin-top: 120px;
+}
+
+#top-page p{
+  font-size: 1rem;
+}
+
+.top-head{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sentence1{
+  margin-top: 30px;
+}
+
+.top-sentence{
+  margin-top: 50px;
+}
+
+.top-button{
+  margin-top: 50px;
+}
+
+.signup-button a{
+  color: white;
+}
+
+.login-button a{
+  color: white;
+}
+
+@media (max-width:768px){
+
+   .login-button{
+     margin-top: 20px;
+   }
+}
