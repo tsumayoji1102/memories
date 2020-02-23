@@ -1,6 +1,6 @@
-<!--  -->
+
 <!-- モーダルの設定 -->
-<%= form_with(url: "/index/ajaxPost", local: true) do |form| %>
+<%= form_with(url: "/index/postList", local: false) do |form| %>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog" role="document">
   <div class="modal-content">
@@ -24,8 +24,9 @@
 </div><!-- /.modal -->
 <% end %>
 
+<div class="post-list mt-3">
 
-<div class="post-card">
+<div class="post-card mt-0">
  <hr class="post-start post-hr">
  <div class="post-information container my-0">
   <div class="my-2 row">
@@ -61,4 +62,48 @@
    </div>
   </div>
  <hr class="post-end post-hr">
+</div>
+
+<% if @posts %>
+<%= @posts.each do |post| %>
+<div class="post-card">
+ <hr class="post-start post-hr my-0">
+ <div class="post-information container my-0">
+  <div class="my-2 row">
+   <div class="col-1">
+     <i class="fa fa-user-circle fa-2x"></i>
+   </div>
+   <a class="ml-4 my-1 account-name"><%= post.account_id %></a>
+   <div class="my-2 col">
+     <i class="fas fa-ellipsis-v float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+     <div class="post-dropdown dropdown open">
+      <ul class="dropdown-menu">
+       <li><a href="#">削除</a></li>
+       <li><a href="#">メニュー3</a></li>
+       <li role="separator" class="divider"></li><!-- 横仕切り線 -->
+       <li><a href="#">その他リンク</a></li>
+      </ul>
+     </div><!-- /.dropdown -->
+   </div>
+  </div>
+ </div><!-- ここまでcontainer -->
+
+ <div class="post-image"><%= post.memo_picture1 %></div>
+ <div class="container my-0">
+   <div class="row">
+     <div class="col favo-button">
+       <a class="heart-button"><i class="far fa-heart"></i></a>
+       <a class="favo-number">0</a>
+     </div>
+     <div class="col mt-1 post-time"><%= post.post_date %></div>
+   </div>
+   <div class="row">
+     <div class="col my-2 post-content"><%= post.content %></div>
+   </div>
+  </div>
+ <hr class="post-end post-hr">
+</div>
+<% end %>
+<% end %>
+
 </div>

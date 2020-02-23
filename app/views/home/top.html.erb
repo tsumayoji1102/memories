@@ -10,8 +10,8 @@
    <p class="top-sentence">端くれのようなメモが、いつの間にか人々に芸術や知見として共有される世界に興味はありませんか。</p>
    <div class="container top-button">
     <div class="row">
-     <button class="signup-button btn btn-primary col-md-5" type="button" href="<%= link_to("", "/signup") %>">サインアップ</button>
-     <button class="login-button btn btn-primary col-md-5 offset-md-2 align-center" type="button" href="<%= link_to("", "/login") %>">サインアップ</button>
+     <%= link_to "サインアップ", "/signup", class: "signup-button btn btn-primary col-md-5" %>
+     <%= link_to "ログイン",    "/login" , class: "login-button btn btn-primary col-md-5 offset-md-2 align-center" %>
     </div>
    </div>
   </div>

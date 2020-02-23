@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
-  get '' => 'home#top'
-  get 'login' => 'user#login'
-  post 'login/check' =>'user#loginCheck'
+  get  ''                => 'home#top'
+  get  'login'           => 'user#login'
+  post 'login/check'     =>'user#loginCheck'
+  get  'signup'          => 'user#signup'
   post 'signup/register' => 'user#register'
-  get 'signup'=> 'user#signup'
-  get 'index' => 'index#post'
-  post 'index/post' => 'index#ajaxPost'
-  get 'logout' => 'user#logout'
+  get  'index'           => 'index#post'
+  post 'index/post'      => 'index#asyncPost'
+  get  'logout'          => 'user#logout'
 
 
 
